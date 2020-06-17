@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="C:/Users/hp/Desktop/masaiCode/ac_020_arjun_tiwari/week_08/css/all.css">
+        <style>
+            .split{
+                height: 100%;
+                position: fixed;
+            }
+            .left{
+                left: 0;
+                background-color: rgb(50, 16, 73);
+            }
+            .right{
+                right: 0;
+                background-color: white;
+            }
+            .link>a:hover {
+                background-color: rgb(148, 72, 199);
+                color: rgb(87, 210, 30) !important;
+            }
+            .top{
+                height: 60px;
+                width: 80%;
+                position: fixed;
+                top: 0;
+                background-color: chocolate;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 split left">
+                    <div class="ml-2">
+                        <div><h1 class="text-white my-3">Paige</h1></div>
+                        <div class="text-white link">
+                            <a class="nav-link  text-white" href="#"><i class="fas fa-shapes mr-2"></i>Dashboard</a>
+                            <a class="nav-link  text-white my-2" href="#"><i class="fas fa-file-invoice-dollar mr-2"></i>Expenses</a>
+                            <a class="nav-link  text-white" href="#"><i class="far fa-file-word mr-2"></i>Payments</a>
+                            <a class="nav-link  text-white my-2" href="#"><i class="fas fa-money-check-alt mr-2"></i>Dues</a>
+                            <a class="nav-link  text-white my-2" href="#"><i class="fas fa-file-invoice mr-2"></i></i>Budget</a>
+                        </div>
+                    </div>        
+                    
+                </div>
+                <div class="col-10 split right">
+                    <div class="row">
+                        <div class="col-12">
+                            <nav class="navbar  navbar-light bg-light border-bottom">
+                                <a class="navbar-brand" href="dashboard.html"><h5>Dashboard</h5></a>
+                                <div class="dropdown">
+                                    <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#">
+                                        <i class="fas fa-user-circle mr-2"><p id="user"></p></i>
+                                        
+                                    </a>                    
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Account</a>
+                                        <a class="dropdown-item" href="#">Log out</a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="card text-white bg-primary">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <h5 class="card-title">Total Expenses</h5>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="card-text" id="expense"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card text-white bg-secondary">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <h5 class="card-title">Total Payment Recieved</h5>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="card-text" id="payment"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="card text-white bg-warning">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <h5 class="card-title">Total Dues</h5>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="card-text" id="due"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card text-white bg-dark">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <h5 class="card-title">Your Budget</h5>
+                                        </div>
+                                        <div class="col-2">
+                                            <p class="card-text" id="budget"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
