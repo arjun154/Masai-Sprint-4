@@ -30,18 +30,18 @@
             }
         </style>
     </head>
-    <body>
+    <body onload="loggedIn(), dashboardData()">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-2 split left">
                     <div class="ml-2">
                         <div><h1 class="text-white my-3">Paige</h1></div>
                         <div class="text-white link">
-                            <a class="nav-link  text-white" href="#"><i class="fas fa-shapes mr-2"></i>Dashboard</a>
-                            <a class="nav-link  text-white my-2" href="#"><i class="fas fa-file-invoice-dollar mr-2"></i>Expenses</a>
-                            <a class="nav-link  text-white" href="#"><i class="far fa-file-word mr-2"></i>Payments</a>
-                            <a class="nav-link  text-white my-2" href="#"><i class="fas fa-money-check-alt mr-2"></i>Dues</a>
-                            <a class="nav-link  text-white my-2" href="#"><i class="fas fa-file-invoice mr-2"></i></i>Budget</a>
+                            <a class="nav-link  text-white" href="dashboard.html"><i class="fas fa-shapes mr-2"></i>Dashboard</a>
+                            <a class="nav-link  text-white my-2" href="expenses.html"><i class="fas fa-file-invoice-dollar mr-2"></i>Expenses</a>
+                            <a class="nav-link  text-white my-2" href="dues.html"><i class="fas fa-money-check-alt mr-2"></i>Dues</a>
+                            <a class="nav-link  text-white my-2" href="budget.html"><i class="fas fa-file-invoice mr-2"></i></i>Budget</a>
+                            <a class="nav-link  text-white" href="income.html"><i class="fas fa-dollar-sign mr-2"></i>Income</a>
                         </div>
                     </div>        
                     
@@ -58,7 +58,7 @@
                                     </a>                    
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item" href="#">Account</a>
-                                        <a class="dropdown-item" href="#">Log out</a>
+                                        <a class="dropdown-item" href="login.html">Log out</a>
                                     </div>
                                 </div>
                             </nav>
@@ -73,7 +73,7 @@
                                             <h5 class="card-title">Total Expenses</h5>
                                         </div>
                                         <div class="col-2">
-                                            <p class="card-text" id="expense"></p>
+                                            <p class="card-text lead" id="expense"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -84,10 +84,10 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-10">
-                                            <h5 class="card-title">Total Payment Recieved</h5>
+                                            <h5 class="card-title">Your Income</h5>
                                         </div>
                                         <div class="col-2">
-                                            <p class="card-text" id="payment"></p>
+                                            <p class="card-text lead" id="income"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
                                             <h5 class="card-title">Total Dues</h5>
                                         </div>
                                         <div class="col-2">
-                                            <p class="card-text" id="due"></p>
+                                            <p class="card-text lead" id="due"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                             <h5 class="card-title">Your Budget</h5>
                                         </div>
                                         <div class="col-2">
-                                            <p class="card-text" id="budget"></p>
+                                            <p class="card-text lead" id="budget"></p>
                                         </div>
                                     </div>
                                 </div>
