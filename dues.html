@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="C:/Users/hp/Desktop/masaiCode/ac_020_arjun_tiwari/week_08/css/all.css">
+        <style>
+            .left{
+                height: 588px;
+                background-color: rgb(50, 16, 73);
+            }
+            .link>a:hover {
+                background-color: rgb(148, 72, 199);
+                color: rgb(87, 210, 30) !important;
+            }
+        </style>
+    </head>
+    <body onload="loggedIn(), updateDues()">
+        <nav class="navbar navbar-light bg-light border-bottom">
+            <div><h1 class="">Paige</h1></div>
+            <div class="dropdown">
+                <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton" href="#">
+                <i class="fas fa-user-circle mr-2"><p id="user"></p></i>
+                </a>                    
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Account</a>
+                    <a class="dropdown-item" href="login.html">Log out</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 left">
+                    <div class="text-white link">
+                        <a class="nav-link  text-white" href="dashboard.html"><i class="fas fa-shapes mr-2"></i>Dashboard</a>
+                        <a class="nav-link  text-white my-2" href="expenses.html"><i class="fas fa-file-invoice-dollar mr-2"></i>Expenses</a>
+                        <a class="nav-link  text-white my-2" href="dues.html"><i class="fas fa-money-check-alt mr-2"></i>Dues</a>
+                        <a class="nav-link  text-white my-2" href="budget.html"><i class="fas fa-file-invoice mr-2"></i></i>Budget</a>
+                        <a class="nav-link  text-white" href="income.html"><i class="fas fa-dollar-sign mr-2"></i>Income</a>
+                    </div>
+                </div>      
+                <div class="col-10">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- <button type="button" class="btn btn-primary float-right mt-3">Add New Payment</button> -->
+                            <button type="button" class="btn btn-primary float-right mt-3" data-toggle="modal" data-target="#exampleModalCenter">
+                                Add New Dues
+                              </button>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                <label for="dues">Dues Amount</label>
+                                                <input type="number" class="form-control" id="duesAmount" aria-describedby="emailHelp" placeholder="Enter Amount">
+                                                </div>
+                                                <div class="form-group">
+                                                <label for="purpose">Purpose</label>
+                                                <input type="text" class="form-control" id="duesPurpose" placeholder="Purpose">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary" id="addDues" onclick="addDue()">Add</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row" id="card-body">
+                        <div class="col-6 offset-3 mt-5">
+                            <div class="card mt-3" id="card">
+                                <div class="card-body text-center" >
+                                    <h4 class="card-title">Dues</h4>
+                                    <p class="card-text lead">There is no Dues yet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="row">
+                        <div class="col-6 offset-3 mt-5">
+                            <div class="card mt-3" id="card1">
+                                <div class="card-body text-center" id="tabel-body">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="dues.js"></script>
+    </body>
+</html>
