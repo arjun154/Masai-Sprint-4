@@ -15,7 +15,7 @@
             }
         </style>
     </head>
-    <body onload=loggedIn()>
+    <body onload="loggedIn(),updateIncome()">
         <nav class="navbar navbar-light bg-light border-bottom">
             <div><h1 class="">Paige</h1></div>
             <div class="dropdown">
@@ -24,7 +24,7 @@
                 </a>                    
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">Account</a>
-                    <a class="dropdown-item" href="#">Log out</a>
+                    <a class="dropdown-item" href="index.html">Log out</a>
                 </div>
             </div>
         </nav>
@@ -56,7 +56,7 @@
                                                 <label for="income">Income Amount</label>
                                                 <input type="number" class="form-control" id="incomeAmount"  placeholder="Enter Amount">
                                                 </div>
-                                                <button type="submit" class="btn btn-primary" id="addExpense">Add</button>
+                                                <button type="submit" class="btn btn-primary" id="addExpense" onclick="addIncome()">Add</button>
                                             </form>
                                         </div>
                                     </div>
@@ -64,12 +64,21 @@
                               </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="row">
                         <div class="col-6 offset-3 mt-5" id="col">
                             <div class="card mt-3">
                                 <div class="card-body text-center">
                                     <h4 class="card-title">Income</h4>
                                     <p class="card-text lead">There is no Income yet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="card">
+                        <div class="col-6 offset-3 mt-5">
+                            <div class="card mt-3" id="card1">
+                                <div class="card-body text-center">
+                                    <h5 id="incomeData"></h5>
                                 </div>
                             </div>
                         </div>
