@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-    <body style="background-color: rgb(50, 16, 73);">
+    <body style="background-color: rgb(50, 16, 73);" onload="renderData()">
         <div class="container">
             <nav class="bg-warning p-3 mt-3 text-center" style="height:auto">
                 <h1>Paige-A Payment Management System</h1>
@@ -21,6 +21,15 @@
                       </li>
                 </ul>
             </nav>
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <div class="card mt-3">
+                        <div class="card-body text-center bg-dark">
+                            <h5 id="head" class="text-light"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-6 offset-3">
                     <div class="card mt-5">
@@ -42,5 +51,6 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">$('.carousel').carousel("data-interval"="2000")</script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

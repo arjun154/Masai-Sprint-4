@@ -50,3 +50,12 @@ function dashboardData(){
         document.getElementById('due').textContent = dues
     }
 }
+
+function renderData(){
+        setInterval( function(){
+            document.getElementById('head').textContent = "Developed for This Generation"
+        },1000)
+        setInterval( function(){
+            document.getElementById('head').textContent = "Developed for Future Ready Organizations"
+        }, 2000)
+}
