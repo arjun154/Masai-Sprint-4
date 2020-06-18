@@ -15,19 +15,38 @@ function registerUser(){
         temp.push(user)
         localStorage.setItem('allUsers',JSON.stringify(temp))
     }
+    localStorage.setItem('loginUser',JSON.stringify(user))
     location = "dashboard.html"
+}
+function loggedIn(){ 
+    var u = localStorage.getItem('loginUser')
+    u = JSON.parse(u)
+    var user = document.getElementById("user")
+    user.textContent = u[0]
 }
 
 function checkUserDetails(){
+    var user = []
     var users = localStorage.getItem('allUsers')
     users = JSON.parse(users)
     var email = document.getElementById('email').value
     var password = document.getElementById('password').value
     for(var i=0; i<users.length; i++){
         if(users[i][1] == email && users[i][2] == password){
+            user.push(users[i][0])
+            localStorage.setItem('loginUser',JSON.stringify(user))
             location = "dashboard.html"
-        }else{
-            alert("Email Or Password Is Wrong")
         }
+    }
+}
+
+function dashboardData(){
+    var expense = JSON.parse(localStorage.getItem('sum'))
+    if(expense>0){
+        document.getElementById('expense').textContent = expense
+    }
+    var dues = JSON.parse(localStorage.getItem('tdue'))
+    if(dues>0){
+        document.getElementById('due').textContent = dues
     }
 }
